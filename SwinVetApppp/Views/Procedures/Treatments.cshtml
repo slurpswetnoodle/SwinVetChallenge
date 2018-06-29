@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SwinVetApppp.Models.Treatment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PricePaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pet.PetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Procedure.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PricePaid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pet.PetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Procedure.Description)
+        </td>
+
+    </tr>
+}
+
+</table>
